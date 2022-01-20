@@ -24,6 +24,11 @@ class AppFonts {
     fontWeight: FontWeight.w400,
     color: AppColors.background,
   );
+  static final lightText = GoogleFonts.poppins(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    color: AppColors.background,
+  );
   static final resultText = GoogleFonts.poppins(
     fontSize: 16,
     fontWeight: FontWeight.w400,

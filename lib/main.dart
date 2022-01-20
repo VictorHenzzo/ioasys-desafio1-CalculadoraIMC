@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutter',
+      title: 'ioasys Desafio 1: Calculadora IMC',
       initialRoute: '/login',
       routes: {
         '/login': (context) => const LoginPage(),
