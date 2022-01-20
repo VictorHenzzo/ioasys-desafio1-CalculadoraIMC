@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ioasys_calculadora_imc/modules/shared/buttons/buttons.dart';
+import 'package:ioasys_calculadora_imc/modules/shared/text_field_imc/text_field_imc.dart';
 import 'package:ioasys_calculadora_imc/modules/shared/themes/app_colors.dart';
 import 'package:ioasys_calculadora_imc/modules/shared/themes/app_fonts.dart';
 import 'package:ioasys_calculadora_imc/modules/shared/themes/app_images.dart';
@@ -68,7 +69,11 @@ class _IMCPageState extends State<IMCPage> {
         actions: [
           GestureDetector(
             onTap: () {
-              //TODO: Inserir função refresh
+              setState(() {
+                resultado = null;
+                pesoController.clear();
+                alturaController.clear();
+              });
             },
             child: const Padding(
               padding: EdgeInsets.only(right: 10),
@@ -81,28 +86,8 @@ class _IMCPageState extends State<IMCPage> {
         child: Column(
           children: [
             Image.asset(AppImages.avatar),
-            SizedBox(
-              width: 300,
-              child: TextField(
-                keyboardType: TextInputType.number,
-                controller: pesoController,
-                decoration: InputDecoration(
-                  hintText: 'Peso (kg)',
-                  hintStyle: AppFonts.hintTexts,
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 300,
-              child: TextField(
-                keyboardType: TextInputType.number,
-                controller: alturaController,
-                decoration: InputDecoration(
-                  hintText: 'Altura (cm)',
-                  hintStyle: AppFonts.hintTexts,
-                ),
-              ),
-            ),
+            TextFieldIMC(controller: pesoController, label: 'Peso (kg)'),
+            TextFieldIMC(controller: alturaController, label: 'Altura (cm)'),
             Buttons(
               onPressed: () {
                 setState(() {
