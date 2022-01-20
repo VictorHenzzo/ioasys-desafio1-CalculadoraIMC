@@ -19,7 +19,7 @@ class TextFieldLogin extends StatelessWidget {
             hintStyle: AppFonts.hintTexts,
             filled: true,
             fillColor: AppColors.background,
-            contentPadding: const EdgeInsets.fromLTRB(30, 20, 20, 20),
+            contentPadding: const EdgeInsets.fromLTRB(25, 0, 20, 20),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(25),
               borderSide: const BorderSide(color: AppColors.background),

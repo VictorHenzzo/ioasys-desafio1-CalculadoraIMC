@@ -15,29 +15,43 @@ class LoginPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
+            const Spacer(flex: 3),
             Image.asset(AppImages.logoLogin),
-            Text(
-              'Seja bem vindo!',
-              style: AppFonts.titleLogin,
+            const Spacer(flex: 4),
+            SizedBox(
+              width: 300,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Seja bem vindo!',
+                    style: AppFonts.titleLogin,
+                  ),
+                  Text(
+                    'Calculadora IMC',
+                    style: AppFonts.subTitleLogin,
+                  )
+                ],
+              ),
             ),
-            Text(
-              'Calculadora IMC',
-              style: AppFonts.subTitleLogin,
-            ),
+            const Spacer(flex: 2),
             const TextFieldLogin(
               text: 'usuário',
             ),
+            const Spacer(flex: 1),
             const TextFieldLogin(
               text: 'senha',
               hideText: true,
             ),
+            const Spacer(flex: 1),
             Buttons(
               onPressed: () {
                 debugPrint('Hit me!');
               },
               text: 'ENTRAR',
               color: AppColors.leading,
-            )
+            ),
+            const Spacer(flex: 5),
           ],
         ),
       ),
