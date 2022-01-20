@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ioasys_calculadora_imc/modules/imc_page/imc_page.dart';
 import 'package:ioasys_calculadora_imc/modules/login_page/login_page.dart';
 
 void main() {
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/login',
       routes: {
         '/login': (context) => const LoginPage(),
+        '/IMC': (context) => const IMCPage(),
       },
     );
   }

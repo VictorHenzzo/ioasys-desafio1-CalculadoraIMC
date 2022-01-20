@@ -46,7 +46,7 @@ class LoginPage extends StatelessWidget {
             const Spacer(flex: 1),
             Buttons(
               onPressed: () {
-                debugPrint('Hit me!');
+                Navigator.pushReplacementNamed(context, '/IMC');
               },
               text: 'ENTRAR',
               color: AppColors.leading,
